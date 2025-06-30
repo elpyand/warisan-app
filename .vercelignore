@@ -1,13 +1,1 @@
-# Jangan unggah folder vendor, Vercel akan menginstalnya sendiri
 /vendor
-
-# Jangan pernah unggah file environment lokal
-.env
-.env.example
-.env.testing
-
-# Jangan unggah folder node_modules
-/node_modules
-
-# Jangan unggah folder storage Laravel
-/storage
