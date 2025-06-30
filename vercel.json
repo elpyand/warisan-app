@@ -2,8 +2,9 @@
     "version": 2,
     "builds": [
         {
-            "src": "api/index.php",
-            "use": "vercel-php@0.6.0"
+            "src": "public/index.php",
+            "use": "vercel-php@0.6.0",
+            "config": { "php": "8.1" }
         }
     ],
     "routes": [
@@ -12,15 +13,8 @@
             "dest": "/public/build/$1"
         },
         {
-            "src": "/(css|js|images|fonts|favicon.ico)(.*)",
-            "dest": "/public/$1$2"
-        },
-        {
-            "handle": "filesystem"
-        },
-        {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/public/index.php"
         }
     ]
 }
